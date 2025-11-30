@@ -4,6 +4,13 @@ html, body {
     padding: 0;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .badge {
     padding: .5em;
     width: 10vw;
@@ -78,8 +85,9 @@ nav ul li a:hover {
 main {
     background-color: white;
     background-image: url(card-back.png);
-    background-size: auto;
+    background-size: cover;
     padding: 1em;
+    flex: 1;
 }
 
 /* --- Homepage Welcome Section Styles (Now consistent with subpage cards) --- */
@@ -201,7 +209,6 @@ footer {
     max-width: 1200px;
     margin: 2em auto;
     align-items: start;
-    /* background-color: transparent; */
 }
 
 /* Base style for content cards */
@@ -228,7 +235,7 @@ footer {
     width: 100%;
 }
 
-/* FIX for About Page: Ensure list items are styled correctly */
+
 .content-card ul {
     list-style: disc; 
     padding-left: 1.5em; 
@@ -250,10 +257,7 @@ footer {
 /* --- Navigation Page Map Styles --- */
 .map-container {
     background-color: skyblue;
-    min-height: 400px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: xx-large;
     border: 3px solid rgb(29, 74, 29);
     border-radius: 40px;
@@ -268,17 +272,29 @@ footer {
     display: block;
 }
 
+.map-links a{
+    padding: 1em;
+    border: 3px solid black;
+    border-radius: 15px;
+    text-decoration: none; 
+    background-color: rgb(29, 74, 29);
+    color: white;
+    
+}
+.Links{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 
 .info-sidebar {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    /* FIX for Map Page: Prevents sidebar from stretching vertically */
     align-self: flex-start;
 }
 
 .address-info, .parking-info {
-    /* FIX for Map Page: Prevents info cards from stretching vertically within the sidebar */
     flex: 0 0 auto;
     background-color: white;
     border: 3px solid rgb(29, 74, 29);
@@ -288,23 +304,44 @@ footer {
     box-shadow: 0 4px 5px gray;
 }
 
-/* --- Activities and About Specific Styles --- */
-.calendar-placeholder {
-    text-align: center;
+.parking-info-list{
+    text-align: left;
+    padding-left: 1.5em; 
+    margin-top: 0;
+}
+.parking-info-list li{
+    padding: .5em 0;
 }
 
+/* --- About Styles --- */
+
+
+.park-history h3, .park-goals h3 {
+font-size: x-large;}
+
 .park-goals ul li {
-    font-weight: bold;
+    padding: .5em;
+}
+
+.goals-list, .history-list{
+    font-size: larger;
 }
 
 .goal-details {
-    font-size: small;
-    font-weight: normal;
-    margin-top: 0.25em;
+padding: .25em;
+
 }
 
 .park-history, .park-goals {
-    justify-content: flex-end; /* FIX: Aligns content to the bottom for the History and Goals cards */
+    justify-content: flex-end; 
+}
+
+
+.history-detail{
+    padding: 1em;
+}
+.milestone-detail{
+    padding: .25em;
 }
 
 
@@ -320,6 +357,7 @@ footer {
         flex-wrap: wrap;
         text-align: center;
         max-width: initial;
+        flex-direction: column;
     }
 
     nav {
