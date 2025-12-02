@@ -313,6 +313,14 @@ footer {
     padding: .5em 0;
 }
 
+/* --- Activity Styles */
+
+.events-calendar ul li{
+    padding: .5em;
+    margin-right:1em;
+}
+
+
 /* --- About Styles --- */
 
 
