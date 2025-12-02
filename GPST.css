@@ -134,6 +134,7 @@ main {
     gap: 2em;
     padding: 1em;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
 
 .highlight-card {
@@ -150,6 +151,7 @@ main {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    scroll-snap-align: center;
 }
 
 .highlight-card h3 {
@@ -444,5 +446,22 @@ padding: .25em;
     .content-card, .recycle-pic, .compost-pic{
         min-height: auto;
         padding: 1em;
+    }
+
+    .highlight-card {
+        width: 300px;
+    }
+
+    .highlight-card h3 {
+        padding: .5em;
+    }
+
+    .welcome-card{
+        max-width: 90vw;
+        margin-top: 2em;
+    }
+    .welcome-card h2{
+        font-size: x-large;
+        padding: .5em;
     }
 }
