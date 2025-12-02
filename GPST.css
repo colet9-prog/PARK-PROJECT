@@ -4,6 +4,7 @@ html, body {
     padding: 0;
 }
 
+
 body {
     min-height: 100vh;
     display: flex;
@@ -379,10 +380,14 @@ padding: .25em;
     justify-content: flex-end; 
 }
 
-
 .history-detail{
     padding: 1em;
 }
+
+.history-detail ul{
+    padding: .5em;
+}
+
 .milestone-detail{
     padding: .25em;
 }
