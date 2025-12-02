@@ -315,7 +315,7 @@ footer {
 
 /* --- Activity Styles */
 
-.events-calendar ul li{
+.events-calendar ul li, .activity-list ul li{
     padding: .5em;
     margin-right:1em;
 }
